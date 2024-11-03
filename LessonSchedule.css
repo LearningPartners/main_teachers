@@ -1,0 +1,111 @@
+.lesson-schedule {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.tab-menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.tab {
+    flex-grow: 1;
+    padding: 15px 30px; /* 탭 길이를 늘려 더 넓게 만듭니다 */
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.tab.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.view-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.view-button {
+    margin: 0 5px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+
+.calendar-day {
+    border: 1px solid #ddd;
+    padding: 20px; /* 정사각형 모양을 유지할 수 있도록 패딩을 조정합니다 */
+    text-align: center;
+    cursor: pointer;
+    aspect-ratio: 1 / 1; /* 정사각형 유지 */
+}
+
+.has-lesson {
+    background-color: #e0f7fa;
+}
+
+.day-number {
+    font-weight: bold;
+}
+
+.add-lesson-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lesson-list {
+    margin-top: 20px;
+}
+
+.list-header {
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.lesson-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.edit-btn, .delete-btn {
+    margin-left: 5px;
+    padding: 5px 10px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
