@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import WeeklyView from "./WeeklyView";
 import './LessonSchedule.css';
 
 const LessonSchedule = () => {
     const [selectedDate, setSelectedDate] = useState(null);
+    const [viewMode, setViewMode] = useState('monthly');
     const [lessons, setLessons] = useState([
         { date: '2024-11-05', title: 'Math with Student A' },
         { date: '2024-11-08', title: 'Science with Student B' },
@@ -42,14 +44,17 @@ const LessonSchedule = () => {
 
     return (
         <div className="lesson-schedule">
-
             <div className="view-toggle">
-                <button>Monthly View</button>
-                <button>Weekly View</button>
+                <button onClick={() => setViewMode('monthly')}>Monthly View</button>
+                <button onClick={() => setViewMode('weekly')}>Weekly View</button>
             </div>
-            <div className="calendar-grid">
-                {renderCalendar()}
-            </div>
+            {viewMode === 'weekly' ? (
+                <WeeklyView />
+            ) : (
+                <div className="calendar-grid">
+                    {renderCalendar()}
+                </div>
+            )}
             <button className="add-lesson-btn" onClick={() => addLesson(selectedDate)}>
                 + Add Lesson
             </button>
