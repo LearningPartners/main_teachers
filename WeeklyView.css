@@ -1,0 +1,58 @@
+.weekly-view {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.weekly-view h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.day-column {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.day-header {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.lesson-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.lesson-subject {
+    font-weight: bold;
+    color: #333;
+}
+
+.lesson-location {
+    font-style: italic;
+}
+
+.lesson-time {
+    color: #666;
+}
