@@ -3,9 +3,9 @@ import './StudentManagement.css';
 
 const StudentManagement = () => {
     const [students, setStudents] = useState([
-        { id: 1, name: 'John Doe', grade: 'Grade 10', status: 'Active' },
-        { id: 2, name: 'Jane Smith', grade: 'Grade 11', status: 'Inactive' },
-        { id: 3, name: 'Michael Johnson', grade: 'Grade 12', status: 'Active' },
+        { id: 1, name: 'John Doe', grade: '초등학교 1학년', status: 'Active' },
+        { id: 2, name: 'Jane Smith', grade: 'Elementary 3rd Grade', status: 'Inactive' },
+        { id: 3, name: 'Michael Johnson', grade: 'Middle School 2nd Grade', status: 'Active' },
     ]);
     const [selectedStudent, setSelectedStudent] = useState(null);
     const [filter, setFilter] = useState({ grade: '', status: '' });
@@ -33,9 +33,15 @@ const StudentManagement = () => {
                 <label>Grade:
                     <select name="grade" onChange={handleFilterChange}>
                         <option value="">All</option>
-                        <option value="Grade 10">Grade 10</option>
-                        <option value="Grade 11">Grade 11</option>
-                        <option value="Grade 12">Grade 12</option>
+                        <option value="Elementary 1st Grade">초등학교 1학년</option>
+                        <option value="Elementary 2nd Grade">초등학교 2학년</option>
+                        <option value="Elementary 3rd Grade">초등학교 3학년</option>
+                        <option value="Elementary 4th Grade">초등학교 4학년</option>
+                        <option value="Elementary 5th Grade">초등학교 5학년</option>
+                        <option value="Elementary 6th Grade">초등학교 6학년</option>
+                        <option value="Middle School 1st Grade">중학교 1학년</option>
+                        <option value="Middle School 2nd Grade">중학교 2학년</option>
+                        <option value="Middle School 3rd Grade">중학교 3학년</option>
                     </select>
                 </label>
                 <label>Status:
